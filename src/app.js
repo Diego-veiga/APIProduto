@@ -13,7 +13,7 @@ function mapRoutes(instance, methods){
 }
 
 async function main (){
-   
+    // vai cair toda hora 
     const connectionPostgress = await Postgres.connect()
     const model = await Postgres.defineModel(connectionPostgress, ProdutoShcema)
     const contextPostgress = new Context(new Postgres(connectionPostgress,model))
