@@ -14,6 +14,8 @@ function mapRoutes(instance, methods){
 
 async function main (){
     // vai cair toda hora 
+    //Please commit your changes or stash them before you switch branches.
+    //Please commit your changes or stash them before you switch branches.
     const connectionPostgress = await Postgres.connect()
     const model = await Postgres.defineModel(connectionPostgress, ProdutoShcema)
     const contextPostgress = new Context(new Postgres(connectionPostgress,model))
