@@ -1,0 +1,5 @@
+docker run --name postgres -e POSTGRES_PASSWORD=minas123  -e POSTGRES_USER=minas -e POSTGRES_DB=produto -p 5432:5432 -d postgres
+
+docker run --name adminer -p 8080:8080 --link postgres:postgres -d adminer
+
+docker run -it -p 5432:5432 --link postgres:postgres postgres psql -h $HOST -p $PORT -U $USER $DATABASE
